@@ -1647,10 +1647,15 @@ int main(void) {
 	else {
 		VBlankIntrWait();
 		scanKeys();
-		if(keysDownRepeat() & KEY_B || keysDown() & KEY_B)
+		if(keysDownRepeat() & KEY_L || keysDown() & KEY_L)
 		{
 			page_num = NOR_list;
 			goto load_file;
+		}
+		else if(keysDownRepeat() & KEY_B || keysDown() & KEY_B)
+		{
+			page_num = NOR_list;
+			goto re_show_menu;
 		}
 	}
 
