@@ -1649,8 +1649,7 @@ int main(void) {
 		scanKeys();
 		if(keysDownRepeat() & KEY_B || keysDown() & KEY_B)
 		{
-			page_num = NOR_list;
-			goto re_show_menu;
+			goto refind_file;
 		}
 		page_num = NOR_list;
 		goto load_file;
